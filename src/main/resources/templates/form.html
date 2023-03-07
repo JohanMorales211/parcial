@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${titulo}"></title>
+</head>
+<body>
+    <h1 th:text="${titulo}"></h1>
+    <form th:action="@{/form}" th:object="${empleado}" method="post">
+        <label for="">id</label>
+        <input type="text" name="id" id="id" required>
+        <label for="">nombre</label>
+        <input type="text" name="nombre" id="nombre">
+        <label for="">apellido</label>
+        <input type="text" name="apellido" id="apellido">
+        <label for="">correo</label>
+        <input type="correo" name="correo" id="correo">
+        <input type="text" name="direccion" id="direccion">
+        <label for="">direccion</label>
+        <input type="text" name="telefono" id="telefono">
+        <label for="">telefono</label>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
